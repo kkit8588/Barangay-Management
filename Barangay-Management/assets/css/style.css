@@ -1,0 +1,150 @@
+/*CUSTOM FONT FAMILY online*/
+@font-face {
+  font-family: 'Inter';
+  src: url('../plugins/inter-font/Inter-VariableFont_slnt,wght.ttf') format('ttf'),
+
+  /* Add more font formats if available */
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+	--light-green: rgb(249 249 249);
+	--dark-green: #0f1f3e;
+	--white: #ffffff;
+	--black: #040000;
+
+	--opacity-gray: rgba(24, 49, 83, 0.2);
+
+	--font-family: 'Inter', sans-serif;
+}
+
+*{	
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-family) !important;
+}
+body{
+	background: var(--light-green) !important;
+	height: 100vh;
+}
+/*======================================
+								TOGGLE
+=======================================*/
+.side-bar.toggle{
+	left: -250px;
+}
+.content.toggle{
+	left: 0;
+	width: 100%;
+}
+/*======================================
+								FORM
+=======================================*/
+/*LOGIN*/
+.hf-bg{
+	background: var(--dark-green) !important;
+}
+.login-container{
+	min-height: 100vh;
+}
+.loginForm{
+	width: 450px;
+}
+.inputContainer{
+	background-color: var(--dark-green);
+}
+/*======================================
+								side-bar
+=======================================*/
+.side-bar{
+	background-color: var(--dark-green);
+	position: fixed;
+	top: 70px;
+	left: 0;
+	height: 100%;
+	padding: 0 10px;
+	width: 250px;
+	transition: left 0.4s ease;
+}
+.nav-item {
+	border-radius: 4px;
+	font-weight: 500;
+	color: var(--white);
+}
+.nav-item:hover,
+.active{
+	background: var(--white);
+	color: #000;
+
+}
+li .nav-link{
+	display: flex;
+	flex-direction: row;
+	column-gap: 8px;
+}
+.icon-span{
+	width: 20px;
+	display: flex;
+}
+#menuIcon:hover{
+	color: blue !important;
+}
+
+/*======================================
+								CONTENT
+=======================================*/
+.content{
+	width: calc(100% - 250px);
+	position: relative;
+	top: 64px;
+	left: 250px;
+	transition: all 0.4s ease;
+	background-image: url('../../upload/mapa.jpg') ; 
+	min-height: 93%;
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.AC_Title{
+	background: var(--dark-green);
+}
+.title_logo{
+	font-size: clamp(0.75rem, 0.3333rem + 1.3333vw, 1.5rem);
+}
+
+/*ASSISTANCE CATEGORY*/
+.assistanceBtn button{
+	border: 2px solid var(--dark-green);
+}
+.actives,
+.assistanceBtn button:hover{
+	border: 2px solid var(--dark-green);
+	background: var(--dark-green);
+	color: var(--white);
+}
+.paginate_button,
+.paginate_active {
+    display: inline-block;
+    padding: 2px 6px;
+    margin-left: 2px;
+    cursor: pointer;
+    *cursor: hand;
+}
+/*==================================
+								TABLE
+====================================*/
+table tr #numbertbl{
+        width: 15px !important;
+    }
+
+    
+@media (max-width: 900px){
+	.side-bar{
+		z-index: 1000 !important;
+	}
+	.content{
+		width: unset;
+		left: unset;
+	}
+}
